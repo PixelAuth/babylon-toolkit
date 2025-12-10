@@ -7,7 +7,6 @@ settings:
 overrides:
   '@walletconnect/logger': 3.0.0
   js-yaml: '>=4.1.1'
-  bitcoinjs-lib: 6.1.7
   '@sats-connect/core>axios': 1.12.2
 
 importers:
@@ -93,148 +92,18 @@ importers:
         specifier: 11.1.0
         version: 11.1.0
 
-  packages/babylon-bsn-registry:
-    devDependencies:
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
-      typescript:
-        specifier: ^5.8.3
-        version: 5.9.2
-
-  packages/babylon-campaigns:
-    dependencies:
-      '@babylonlabs-io/core-ui':
-        specifier: workspace:*
-        version: link:../babylon-core-ui
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: 18.3.1
-        version: 18.3.1(react@18.3.1)
-      react-icons:
-        specifier: 5.3.0
-        version: 5.3.0(react@18.3.1)
-      tailwind-merge:
-        specifier: 2.5.4
-        version: 2.5.4
-    devDependencies:
-      '@chromatic-com/storybook':
-        specifier: ^3.2.2
-        version: 3.2.7(react@18.3.1)(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))
-      '@commitlint/cli':
-        specifier: ^19.8.0
-        version: 19.8.1(@types/node@22.17.0)(typescript@5.9.2)
-      '@commitlint/config-conventional':
-        specifier: ^19.8.0
-        version: 19.8.1
-      '@eslint/js':
-        specifier: ^9.31.0
-        version: 9.32.0
-      '@internal/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
-      '@semantic-release/github':
-        specifier: ^11.0.2
-        version: 11.0.3(semantic-release@24.2.7(typescript@5.9.2))
-      '@semantic-release/npm':
-        specifier: ^12.0.1
-        version: 12.0.2(semantic-release@24.2.7(typescript@5.9.2))
-      '@storybook/addon-essentials':
-        specifier: ^8.6.14
-        version: 8.6.14(@types/react@18.3.23)(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))
-      '@storybook/addon-interactions':
-        specifier: ^8.6.14
-        version: 8.6.14(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))
-      '@storybook/addon-onboarding':
-        specifier: ^8.6.14
-        version: 8.6.14(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))
-      '@storybook/blocks':
-        specifier: ^8.6.14
-        version: 8.6.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))
-      '@storybook/react':
-        specifier: ^8.6.14
-        version: 8.6.14(@storybook/test@8.6.14(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))(typescript@5.9.2)
-      '@storybook/react-vite':
-        specifier: ^8.6.14
-        version: 8.6.14(@storybook/test@8.6.14(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.46.1)(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))(typescript@5.9.2)(vite@6.4.1(@types/node@22.17.0)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.3)(yaml@2.8.0))
-      '@storybook/test':
-        specifier: ^8.6.14
-        version: 8.6.14(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))
-      '@types/react':
-        specifier: ^18.3.12
-        version: 18.3.23
-      '@types/react-dom':
-        specifier: ^18.3.1
-        version: 18.3.7(@types/react@18.3.23)
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.44.1
-        version: 8.44.1(@typescript-eslint/parser@8.44.1(eslint@9.32.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.32.0(jiti@2.5.1))(typescript@5.9.2)
-      '@vitejs/plugin-react':
-        specifier: ^4.4.1
-        version: 4.7.0(vite@6.4.1(@types/node@22.17.0)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.3)(yaml@2.8.0))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.21(postcss@8.5.6)
-      globals:
-        specifier: ^16.3.0
-        version: 16.3.0
-      husky:
-        specifier: ^9.1.7
-        version: 9.1.7
-      lint-staged:
-        specifier: ^15.5.0
-        version: 15.5.2
-      nodemon:
-        specifier: ^3.1.0
-        version: 3.1.10
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.6
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
-      prettier-plugin-tailwindcss:
-        specifier: ^0.6.8
-        version: 0.6.14(prettier-plugin-organize-imports@4.2.0(prettier@3.6.2)(typescript@5.9.2))(prettier@3.6.2)
-      semantic-release:
-        specifier: ^24.2.3
-        version: 24.2.7(typescript@5.9.2)
-      storybook:
-        specifier: ^8.6.14
-        version: 8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10)
-      storybook-dark-mode:
-        specifier: ^4.0.2
-        version: 4.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.14(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10))
-      tailwindcss:
-        specifier: ^3.4.14
-        version: 3.4.17(ts-node@10.9.2(@swc/core@1.5.29(@swc/helpers@0.5.17))(@types/node@22.17.0)(typescript@5.9.2))
-      typescript:
-        specifier: ^5.8.3
-        version: 5.9.2
-      typescript-eslint:
-        specifier: ^8.44.1
-        version: 8.44.1(eslint@9.32.0(jiti@2.5.1))(typescript@5.9.2)
-      vite:
-        specifier: ^6.4.1
-        version: 6.4.1(@types/node@22.17.0)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.3)(yaml@2.8.0)
-      vite-plugin-dts:
-        specifier: ^4.3.0
-        version: 4.5.4(@types/node@22.17.0)(rollup@4.46.1)(typescript@5.9.2)(vite@6.4.1(@types/node@22.17.0)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.3)(yaml@2.8.0))
-
   packages/babylon-config:
     dependencies:
       '@babylonlabs-io/wallet-connector':
         specifier: workspace:*
         version: link:../babylon-wallet-connector
-      viem:
-        specifier: 2.38.2
-        version: 2.38.2(bufferutil@4.0.9)(typescript@5.9.2)(utf-8-validate@5.0.10)(zod@4.1.12)
     devDependencies:
       typescript:
         specifier: ^5.8.3
         version: 5.9.2
+      viem:
+        specifier: ^2.38.2
+        version: 2.38.2(bufferutil@4.0.9)(typescript@5.9.2)(utf-8-validate@5.0.10)(zod@4.1.12)
 
   packages/babylon-core-ui:
     dependencies:
@@ -481,6 +350,9 @@ importers:
       typescript:
         specifier: ^5.8.3
         version: 5.9.2
+      viem:
+        specifier: ^2.38.2
+        version: 2.38.2(bufferutil@4.0.9)(typescript@5.9.2)(utf-8-validate@5.0.10)(zod@4.1.12)
       vite:
         specifier: ^6.4.1
         version: 6.4.1(@types/node@22.17.0)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.3)(yaml@2.8.0)
@@ -578,7 +450,7 @@ importers:
         specifier: 11.1.0
         version: 11.1.0
       viem:
-        specifier: 2.38.2
+        specifier: ^2.38.2
         version: 2.38.2(bufferutil@4.0.9)(typescript@5.9.2)(utf-8-validate@5.0.10)(zod@4.1.12)
       wagmi:
         specifier: 2.18.1
@@ -728,9 +600,6 @@ importers:
       '@babylonlabs-io/babylon-proto-ts':
         specifier: workspace:*
         version: link:../../packages/babylon-proto-ts
-      '@babylonlabs-io/bsn-registry':
-        specifier: workspace:*
-        version: link:../../packages/babylon-bsn-registry
       '@babylonlabs-io/btc-staking-ts':
         specifier: 2.8.6
         version: 2.8.6(@babylonlabs-io/babylon-proto-ts@packages+babylon-proto-ts)(bitcoinjs-lib@6.1.7)
@@ -837,7 +706,7 @@ importers:
         specifier: 11.1.0
         version: 11.1.0
       viem:
-        specifier: 2.38.2
+        specifier: ^2.38.2
         version: 2.38.2(bufferutil@4.0.9)(typescript@5.9.2)(utf-8-validate@5.0.10)(zod@3.22.4)
       wagmi:
         specifier: 2.18.1
@@ -1072,7 +941,7 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(react@18.3.1)
       viem:
-        specifier: 2.38.2
+        specifier: ^2.38.2
         version: 2.38.2(bufferutil@4.0.9)(typescript@5.9.2)(utf-8-validate@5.0.10)(zod@3.22.4)
       wagmi:
         specifier: 2.18.1
@@ -4077,6 +3946,18 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
+<<<<<<< HEAD
+=======
+  '@tomo-inc/ledger-bitcoin-babylon@0.3.5-alpha.0':
+    resolution: {integrity: sha512-7LtLIHTYPJyr9zMF4k3yq49S2JS2KLP/qTvN8p5+EJF72J4pPeJaXfouzO81TeGsqWBZnez2ymCQY2cYrfNfhQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@ledgerhq/hw-transport': 6.31.10
+      '@ledgerhq/hw-transport-webhid': 6.30.6
+      '@ledgerhq/hw-transport-webusb': 6.29.10
+      bitcoinjs-lib: 6.1.5
+
+>>>>>>> 04851054b5d4f6c7965b4549340c7832d7419c17
   '@tomo-inc/tomo-wallet-provider@1.1.19':
     resolution: {integrity: sha512-wkr6Bqel6O2XGHr+ujQH6C9sfFkKwLiMbf+YBJMZOMB2e1vqh/wF70QpZIhzlnScaSpj4W9U+IFiiRXkzl5IEA==}
     peerDependencies:
@@ -4087,7 +3968,7 @@ packages:
       '@keystonehq/keystone-sdk': 0.9.0
       '@keystonehq/sdk': 0.22.1
       '@scure/bip32': ^1.4.0
-      bitcoinjs-lib: 6.1.7
+      bitcoinjs-lib: ^6.1.5
       react: ^18
       react-dom: ^18
 
@@ -7553,7 +7434,11 @@ packages:
       '@ledgerhq/hw-transport': 6.31.10
       '@ledgerhq/hw-transport-webhid': 6.30.6
       '@ledgerhq/hw-transport-webusb': 6.29.10
+<<<<<<< HEAD
       bitcoinjs-lib: 6.1.7
+=======
+      bitcoinjs-lib: 6.1.5
+>>>>>>> 04851054b5d4f6c7965b4549340c7832d7419c17
 
   ledger-bitcoin@0.2.3:
     resolution: {integrity: sha512-sWdvMTR5CkebNlM0Mam9ROdpsD7Y4087kj4cbIaCCq8IXShCQ44vE3j0wTmt+sHp13eETgY63OWN1rkuIfMfuQ==}

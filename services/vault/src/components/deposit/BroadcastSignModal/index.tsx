@@ -18,7 +18,9 @@ import {
 } from "@babylonlabs-io/core-ui";
 import { useState } from "react";
 
+import { usePeginPolling } from "../../../context/deposit/PeginPollingContext";
 import { useVaultActions } from "../../../hooks/deposit/useVaultActions";
+import { LocalStorageStatus } from "../../../models/peginStateMachine";
 import { usePeginStorage } from "../../../storage/usePeginStorage";
 import type { VaultActivity } from "../../../types/activity";
 
@@ -104,6 +106,9 @@ export function BroadcastSignModal({
       confirmedPegins: [],
     });
 
+  // Get optimistic update from polling context
+  const { setOptimisticStatus } = usePeginPolling();
+
   const pendingPegin = pendingPegins.find((p) => p.id === activity.id);
 
   const handleSign = async () => {
@@ -114,6 +119,7 @@ export function BroadcastSignModal({
         activityId: activity.id,
         activityAmount: activity.collateral.amount,
         activityProviders: activity.providers,
+        activityApplicationController: activity.applicationController,
         connectedAddress: depositorEthAddress,
         pendingPegin,
         updatePendingPeginStatus,
@@ -122,6 +128,8 @@ export function BroadcastSignModal({
           // Will be called after broadcast
         },
         onShowSuccessModal: () => {
+          // Optimistically update UI immediately (before refetch completes)
+          setOptimisticStatus(activity.id, LocalStorageStatus.CONFIRMING);
           setLocalBroadcasting(false);
           onSuccess();
         },
